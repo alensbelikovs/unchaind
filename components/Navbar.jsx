@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-[30px]">
                     <Image src="/icons/logo.svg" height={36} width={36} alt="logo"/>
                     <Link href="/" className="navbar-link"><p>Home</p></Link>
-                    <Link href="/" className="navbar-link"><p>Our Story</p></Link>
+                    <Link href="/story" className="navbar-link"><p>Our Story</p></Link>
                     <Link href="/" className="navbar-link"><p>Works</p></Link>
                 </div>
                 <Link href="/" className="navbar-contact-link"><p>Contact Us</p></Link>

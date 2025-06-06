@@ -75,6 +75,24 @@ body {
       transform-origin: left;
     }
 
+    .main-button-inverted {
+      @apply flex justify-center items-center pb-[15px] gap-1 relative;
+    }
+    .main-button-inverted-icon {
+      animation: main-button-icon-animate 1s infinite;
+    }
+    .main-button-inverted::after {
+      content: "";
+      @apply absolute bottom-0 left-0 h-[2px] w-full bg-[var(--foreground)];
+      transform: scaleX(0%);
+      transform-origin: right;
+      transition: transform 0.2s ease-in-out;
+    }
+    .main-button-inverted:hover::after {
+      transform: scaleX(100%);
+      transform-origin: left;
+    }
+
     .work-highlight-button {
       @apply flex justify-center items-center gap-1 relative pb-[10px];
     }

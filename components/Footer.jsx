@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 
@@ -29,7 +30,7 @@ export default function Footer() {
                 <div className="pt-[60px]">
                     <h1 className="text-[30px] sm:text-[62px] lg:text-[100px]">Done dreaming?</h1>
                     <h1 className="max-w-xl pb-[30px] text-[37.5px] sm:text-[62px] lg:text-[100px]">Let's build it together.</h1>
-                    <h2 className="text-[21px] sm:text-[37.5px] lg:text-[62px]"><Link href="/">Get in touch</Link></h2>
+                    <h2 className="text-[21px] sm:text-[37.5px] lg:text-[62px] flex"><Link href="/" className="main-button-inverted"><span>Get in touch</span><Image src="/icons/arrow-light.svg" height={36} width={36} alt="arrow-icon" className="main-button-icon"/></Link></h2>
                 </div>
                 {/* Footer */}
                 <div className="border-t-1 flex flex-col lg:flex-row justify-between gap-8 lg:gap-0 pt-[30px] text-left">
@@ -56,7 +57,7 @@ export default function Footer() {
                     <div className="flex flex-col justify-between md:flex-row gap-8 lg:gap-0 pt-[0px]">
 
                         {/* Footer item */}
-                        <div className="flex flex-col border-b-[1px] pb-[30px] md:border-none md:pb-[0px]">
+                        <div className="flex flex-col border-b-[1px] pb-[30px] md:border-none md:pb-[0px] lg:pr-[60px]">
                             <h2 className="pb-[30px]">Navigation</h2>
                             <p className="pb-[10px]">Home</p>
                             <p className="pb-[10px]">Our Story</p>

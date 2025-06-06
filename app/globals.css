@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@font-face {
+/* @font-face {
   font-family: 'Acid Grotesk';
   src: url('/fonts/acid-grotesk-normal.woff2') format('woff2');
   font-weight: 400;
@@ -30,7 +30,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 :root {
   --foreground: #DFDFDF;
@@ -40,20 +40,96 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Acid Grotesk', Arial, Helvetica, sans-serif;
+  font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
 }
 
 @layer typography {
   h1 {
-    @apply text-[100px] font-[500] leading-tight;
+    @apply text-[62px] md:text-[100px] font-[500] leading-tight;
   }
   h2 {
-    @apply text-[37.5px] leading-tight;
+    /* @apply lg:text-[37.5px] text-[21px] font-[500] leading-tight; */
+    @apply text-[21px] md:text-[37.5px] font-[500] leading-tight;
   }
   p {
-    @apply text-[21px];
+    @apply text-[17px] sm:text-[21px];
   }
 }
 
-@layer layout {
+@layer utils {
+    .main-button {
+      @apply flex justify-center items-center pb-[15px] gap-1 relative;
+    }
+    .main-button-icon {
+      animation: main-button-icon-animate 1s infinite;
+    }
+    .main-button::after {
+      content: "";
+      @apply absolute bottom-0 left-0 h-[2px] w-full bg-[var(--background)];
+      transform: scaleX(0%);
+      transform-origin: right;
+      transition: transform 0.2s ease-in-out;
+    }
+    .main-button:hover::after {
+      transform: scaleX(100%);
+      transform-origin: left;
+    }
+
+    .work-highlight-button {
+      @apply flex justify-center items-center gap-1 relative pb-[10px];
+    }
+    .work-highlight-button::after {
+      content: "";
+      @apply absolute bottom-0 left-0 h-[1px] w-full bg-[var(--foreground)];
+      transform: scaleX(0%);
+      transform-origin: right;
+      transition: transform 0.2s ease-in-out;
+    }
+    .work-highlight-button:hover::after {
+      transform: scaleX(100%);
+      transform-origin: left;
+    }
+    .work-highlight-button-icon {
+      animation: work-highlight-button-icon-animate 1s infinite;
+    }
+    .navbar-link {
+      @apply relative;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .navbar-link::after {
+      content: "";
+      @apply absolute -bottom-[5px] left-0 h-[1px] w-full bg-[var(--foreground)];
+      transform: scaleX(0%);
+      transform-origin: right;
+      transition: transform 0.2s ease-in-out;
+    }
+    .navbar-link:hover::after {
+      transform: scaleX(100%);
+      transform-origin: left;
+    }
+}
+
+@keyframes main-button-icon-animate {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes work-highlight-button-icon-animate {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

@@ -2,11 +2,11 @@ import OfferItem from "@/components/landing_components/OfferItem"
 
 export default function Process() {
     return (
-        <section className="flex justify-center py-[240px] h-[200vh] relative">
-            <div className="h-full">
-                <h1 className="sticky top-[25%] pr-[60px]">Our Process</h1>
+        <section className="flex flex-col justify-center lg:flex-row py-[120px] relative px-[50px] bg-[var(--background)]">
+            <div className="flex justify-center lg:block mb-8 lg:mb-0">
+                <h1 className="lg:sticky lg:top-[25%] lg:pr-[60px] pb-[15px]">Our Process</h1>
             </div>
-            <div className="flex flex-col pl-[60px]">
+            <div className="flex flex-col lg:pl-[60px] lg:pr-0">
                 <OfferItem heading="Discover & Define">We start by uncovering the story your brand needs to tell. Through collaborative workshops and mockups, we help you choose the right visual and strategic direction.</OfferItem>
                 <OfferItem heading="Create & Curate">Once the direction is clear, we produce high-quality visuals - photos, graphics, and assets that are crafted to reflect your brand’s unique voice and identity.</OfferItem>
                 <OfferItem heading="Build & Develop">With the visuals and narrative in place, we develop your site from the ground up using modern technologies to ensure speed, stability, and responsiveness.</OfferItem>

@@ -3,6 +3,7 @@
 import "./globals.css"
 import Lenis from "lenis"
 import { useState, useEffect } from "react"
+import Navbar from "@/components/Navbar"
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -49,8 +50,14 @@ export default function RootLayout({ children }) {
 
 	return (
 		<html lang="en">
+			<head>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+			</head>
 			<body className={`antialiased`}>
 				{!pageReady && <div className="h-screen w-full bg-[var(--background)] fixed z-[1000]">loading</div>}
+				<Navbar/>
 				{children}
 			</body>
 		</html>

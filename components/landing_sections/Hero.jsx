@@ -14,19 +14,19 @@ export default function Hero() {
 	const opacityVisual = useTransform(scrollYProgress, [0.7, 0.9], [1, 0])
 
 	return (
-		<section className="h-[100dvh] w-full" ref={ref}>
+		<section className="h-[100vh] w-full" ref={ref}>
 			{/* Text */}
-			<motion.div className="h-full w-full flex flex-row fixed inset-0 p-[50px]" style={{ opacity: opacityText, pointerEvents: inView ? 'auto' : 'none' }}>
-				<div className="h-full flex items-end w-[50%]">
-					<h1 className="text-[100px] font-[500] leading-tight max-w-4xl">Imagine if websites could speak.</h1>
+			<motion.div className="h-full w-full flex flex-col xl:flex-row fixed inset-0 p-[25px] md:p-[50px]" style={{ opacity: opacityText, pointerEvents: inView ? 'auto' : 'none' }}>
+				<div className="h-full flex items-center justify-center xl:justify-start text-center xl:text-left xl:items-end w-full xl:w-[75%]">
+					<h1 className="">Imagine if websites could speak.</h1>
 				</div>
-				<div className="h-full flex flex-row items-end justify-end w-[50%]">
+				<div className="h-full flex flex-col xl:flex-row items-center text-center xl:text-left xl:items-end xl:justify-end w-full xl:w-[50%]">
 					<div className="flex flex-col">
-						<p className="font-[500] max-w-xs py-[15px]">We’re a narrative driven web design & development studio</p>
-						<p className="font-[500] max-w-xs py-[15px]">Transforming unconventional ideas</p>
+						<p className="max-w-sm xl:max-w-xs pb-[7px] pt-[30px] xl:pb-[15px] xl:pt-[15px]">We’re a narrative driven web design & development studio</p>
+						<p className="max-w-sm xl:max-w-xs py-[7px] xl:py-[15px]">Transforming unconventional ideas</p>
 					</div>
 					<div>
-						<p className="font-[500] max-w-xs py-[15px]">Into compelling digital experiences.</p>
+						<p className="max-w-sm xl:max-w-xs py-[7px] xl:py-[15px]">Into compelling digital experiences.</p>
 					</div>
 				</div>
 			</motion.div>
